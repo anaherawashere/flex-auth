@@ -11,15 +11,12 @@ const queryClient = new QueryClient()
 
 document.addEventListener('DOMContentLoaded', () => {
   createRoot(document.getElementById('app') as HTMLElement).render(
-    /**
-     * TODO: replace domain, clientId, and audience
-     */
     <Auth0Provider
-      domain=""
-      clientId=""
+      domain="dev-tm5dy8tuf66z1xg7.us.auth0.com"
+      clientId="sUWCtsOrqJCBkUQYXsVZokyPNrSfayOP"
       authorizationParams={{
         redirect_uri: window.location.origin,
-        audience: '',
+        audience: 'https://flex-auth/api',
       }}
     >
       <QueryClientProvider client={queryClient}>
